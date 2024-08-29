@@ -10,6 +10,7 @@ const getArg = (argName) => {
     }
 
     if(args[argName] && args[argName] === 'string'){
+        const index = process.argv.indexOf(argName)
         return index > -1 
             ? process.argv[index + 1] 
             : null
